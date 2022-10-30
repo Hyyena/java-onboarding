@@ -22,6 +22,30 @@ class Problem1 {
         return rightPage - leftPage == 1;
     }
 
+    public static int plusEachDigitOnLeftPage(List<Integer> book) {
+        int leftPage = book.get(0);
+        int total = 0;
+
+        while (leftPage > 0) {
+            total += leftPage % 10;
+            leftPage /= 10;
+        }
+
+        return total;
+    }
+
+    public static int plusEachDigitOnRightPAge(List<Integer> book) {
+        int rightPage = book.get(1);
+        int total = 0;
+
+        while (rightPage > 0) {
+            total += rightPage % 10;
+            rightPage /= 10;
+        }
+
+        return total;
+    }
+
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
         return answer;
