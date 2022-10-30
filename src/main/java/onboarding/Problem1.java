@@ -15,6 +15,13 @@ class Problem1 {
         return rightPage % 2 == 0;
     }
 
+    public static boolean isContinuousPage(List<Integer> book) {
+        int leftPage = book.get(0);
+        int rightPage = book.get(1);
+
+        return rightPage - leftPage == 1;
+    }
+
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
         return answer;
