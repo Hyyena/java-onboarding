@@ -9,6 +9,12 @@ class Problem1 {
         return leftPage % 2 == 1;
     }
 
+    public static boolean isRightPageEven(List<Integer> book) {
+        int rightPage = book.get(1);
+
+        return rightPage % 2 == 0;
+    }
+
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
         return answer;
