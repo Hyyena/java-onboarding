@@ -99,6 +99,36 @@ class Problem1 {
 
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
+
+        if (!isLeftPageOdd(pobi) || !isLeftPageOdd(crong)) {
+            return -1;
+        }
+
+        if (!isRightPageEven(pobi) || !isRightPageEven(crong)) {
+            return -1;
+        }
+
+        if (!isContinuousPage(pobi) || !isContinuousPage(crong)) {
+            return -1;
+        }
+
+        int pobiScore1 = plusEachDigitOnLeftPage(pobi);
+        int pobiScore2 = plusEachDigitOnRightPAge(pobi);
+
+        int pobiScore3 = productEachDigitOnLeftPage(pobi);
+        int pobiScore4 = productEachDigitOnRightPage(pobi);
+
+        int pobiMaxScore = determineScores(pobiScore1, pobiScore2, pobiScore3, pobiScore4);
+
+        int crongScore1 = plusEachDigitOnLeftPage(crong);
+        int crongScore2 = plusEachDigitOnRightPAge(crong);
+        int crongScore3 = productEachDigitOnLeftPage(crong);
+        int crongScore4 = productEachDigitOnRightPage(crong);
+
+        int crongMaxScore = determineScores(crongScore1, crongScore2, crongScore3, crongScore4);
+
+        answer = determineWinner(pobiMaxScore, crongMaxScore);
+
         return answer;
     }
 }
