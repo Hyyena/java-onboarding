@@ -1,5 +1,6 @@
 package onboarding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 class Problem1 {
@@ -68,6 +69,17 @@ class Problem1 {
         }
 
         return total;
+    }
+
+    public static ArrayList<Integer> returnScoresToList(int score1, int score2, int score3, int score4) {
+        ArrayList<Integer> arrList = new ArrayList<>();
+
+        arrList.add(score1);
+        arrList.add(score2);
+        arrList.add(score3);
+        arrList.add(score4);
+
+        return arrList;
     }
 
     public static int solution(List<Integer> pobi, List<Integer> crong) {
