@@ -83,6 +83,20 @@ class Problem1 {
         return Collections.max(arrList);
     }
 
+    public static int determineWinner(int pobiScore, int crongScore) {
+        int result = 0;
+
+        if (pobiScore > crongScore) {
+            result = 1;
+        }
+
+        if (pobiScore < crongScore) {
+            result = 2;
+        }
+
+        return result;
+    }
+
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
         return answer;
